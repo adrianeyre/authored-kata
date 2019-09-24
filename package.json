@@ -1,0 +1,28 @@
+{
+  "name": "authored-kata",
+  "version": "1.0.0",
+  "description": "Codewars authored kata links",
+  "main": "index.js",
+  "scripts": {
+    "ftp-deploy": "node deploy.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adrianeyre/authored-kata.git"
+  },
+  "author": {
+    "name": "Adrian Eyre",
+    "url": "http://adrianeyre.co.uk"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adrianeyre/authored-kata/issues"
+  },
+  "homepage": "https://github.com/adrianeyre/authored-kata#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "ftp": "^0.3.10",
+    "glob": "^7.1.4",
+    "html-minifier": "^4.0.0"
+  }
+}
