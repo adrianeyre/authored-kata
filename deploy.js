@@ -3,7 +3,7 @@ const FtpClient = require('ftp');
 const glob = require('glob');
 const minify = require('html-minifier').minify;
 
-const basePath = './public';
+const basePath = './src';
 const destinationPath = '/public_html/codewars';
 const htmlFilename = 'index.html';
 const config = {
