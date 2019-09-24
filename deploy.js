@@ -3,7 +3,8 @@ const FtpClient = require('ftp');
 const glob = require('glob');
 const minify = require('html-minifier').minify;
 
-const basePath = './src';
+const srcPath = './src';
+const basePath = './public';
 const destinationPath = '/public_html/codewars';
 const htmlFilename = 'index.html';
 const config = {
@@ -43,8 +44,7 @@ function handlePath(path) {
 }
 
 ftpClient.on('ready', () => {
-    createDirectory(destinationPath);
-    const result = fs.readFileSync(`./src/${ htmlFilename }`, encoding='utf8');  
+    const result = fs.readFileSync(`${ srcPath }/${ htmlFilename }`, encoding='utf8');  
     const text = minify(result, {});
     fs.writeFileSync(`${ basePath }/${ htmlFilename }`, text);
     glob.sync(`${ basePath }/**/*`).forEach(handlePath);  
