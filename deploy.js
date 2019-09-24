@@ -46,7 +46,7 @@ ftpClient.on('ready', () => {
     createDirectory(destinationPath);
     const result = fs.readFileSync(`./src/${ htmlFilename }`, encoding='utf8');  
     const text = minify(result, {});
-    fs.writeFileSync(`${ destinationPath }/${ htmlFilename }`, text);
+    fs.writeFileSync(`${ basePath }/${ htmlFilename }`, text);
     glob.sync(`${ basePath }/**/*`).forEach(handlePath);  
 });
 
