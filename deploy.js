@@ -45,7 +45,16 @@ function handlePath(path) {
 
 ftpClient.on('ready', () => {
     const result = fs.readFileSync(`${ srcPath }/${ htmlFilename }`, encoding='utf8');  
-    const text = minify(result, {});
+    const text = minify(result, {
+		collapseInlineTagWhitespace: true,
+		collapseWhitespace: true,
+		minifyCSS: true,
+		minifyJS: true,
+		minifyURLs: true,
+		removeComments: true,
+		removeEmptyAttributes: true,
+		removeTagWhitespace: true,
+	});
     fs.writeFileSync(`${ basePath }/${ htmlFilename }`, text);
     glob.sync(`${ basePath }/**/*`).forEach(handlePath);  
 });
