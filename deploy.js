@@ -43,10 +43,16 @@ function handlePath(path) {
 }
 
 ftpClient.on('ready', () => {
-    var text = fs.readFileSync(`./src/${ htmlFilename }`, encoding='utf8')
-    var result = minify(text, {});
-    fs.writeFile(`${ basePath }/public/${ htmlFilename }`);
-	glob.sync(`${ basePath }/**/*`).forEach(handlePath);
+    fs.readFile(`./src/${ htmlFilename }`, encoding='utf8').then(function(err, result) {
+        if (err) return console.log(err);     
+        const text = minify(result, {});
+
+        fs.writeFile(`${ basePath }/public/${ htmlFilename }`, text, function(err) {
+            if(err) return console.log(err);
+        
+            glob.sync(`${ basePath }/**/*`).forEach(handlePath);
+        });
+    })    
 });
 
 ftpClient.connect(config);
