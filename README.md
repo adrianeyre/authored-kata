@@ -1,5 +1,5 @@
 <div class="text-white bg-gray-dark mb-2">
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="text-white bg-gray-dark mb-2">
     <tr>
         <td width="600"><table width="600" border="1" cellpadding="0" cellspacing="0">
             <tr>
