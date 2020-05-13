@@ -1,4 +1,4 @@
-<table width="600" border="1" cellpadding="0" cellspacing="0">
+<table width="600px" border="1" cellpadding="0" cellspacing="0">
 	<tr>
 		<td width="240"><b>Title</b></td>
 		<td width="380"><b>Languages</b></td>
