@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<html lang="{{ site.lang | default: "en-US" }}">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-{% seo %}
-    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
-  </head>
-  <style>
-	body {
-		background-color: #424242 !important;
-		color: rgb(192, 192, 192) !important;
-		padding: 0px !important;
-		margin: 0px !important;
-	}
-  </style>
-  <body>
-    <div>
-      {{ content }}
-    </div>
-    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
-  </body>
+	{% seo %}
+		<link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+		<style>
+			body {
+				background-color: #424242 !important;
+				color: rgb(192, 192, 192) !important;
+				padding: 0px !important;
+				margin: 0px !important;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div>
+		{{ content }}
+		</div>
+		<script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+	</body>
 </html>
